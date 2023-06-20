@@ -84,9 +84,8 @@
 
 \newkeycommand{\educationItem}[university,college,program,graduation,grade,coursework]{
     {\bf \commandkey{program}} \hfill {Graduating \commandkey{graduation}} \\
-    {\commandkey{university}} \hfill \ifcommandkey{grade}{\commandkey{grade}}{} \\
-    \ifcommandkey{college}{\commandkey{college}}{} \\
-    \ifcommandkey{coursework}{Relevant coursework: \commandkey{coursework}}{}
+    {\commandkey{university}} \hfill \ifcommandkey{grade}{\commandkey{grade}}{}
+    \ifcommandkey{college}{\commandkey{college}}{}
 }
 
 \newcommand{\skills}{

@@ -19,19 +19,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Set up Docker
+      - name: Setup
         uses: docker-practice/actions-setup-docker@master
 
-      - name: Build Docker image
+      - name: Build
         run: docker build --tag dz-ipr3 -f Dockerfile . 
 
-      - name: Run Docker container
+      - name: Run
         run: docker run --name resume-container dz-ipr3 -f Dockerfile .
       
-      - name: Copy from Docker container
+      - name: Copy
         run: |
           mkdir -p pdf
-          docker cp resume-container:/main.pdf pdf/
+          docker cp resume-container:/cv.pdf pdf/
